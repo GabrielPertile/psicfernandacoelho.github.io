@@ -1,6 +1,6 @@
-# Landing Page para Psicólogo
+# Landing Page Estática para Psicólogo
 
-Uma landing page moderna, elegante e otimizada para SEO, criada para psicólogos e terapeutas.
+Uma landing page moderna, elegante e otimizada para SEO, criada para psicólogos e terapeutas. Esta é uma versão totalmente estática, sem dependências de frameworks ou backend.
 
 ## Características
 
@@ -8,19 +8,23 @@ Uma landing page moderna, elegante e otimizada para SEO, criada para psicólogos
 - Totalmente responsivo (mobile-first)
 - Otimizado para SEO
 - Carregamento rápido
-- Código limpo e bem estruturado
+- HTML/CSS/JS puro
 - Formulário de contato com validação
 - Botão de WhatsApp para contato rápido
 
-## Estrutura
+## Estrutura do Projeto
 
-- **Hero section**: Banner principal com chamada para ação
-- **Sobre**: Apresentação do profissional e suas qualificações
-- **Serviços**: Detalhes sobre os serviços oferecidos
-- **Números/Conquistas**: Estatísticas relevantes
-- **Depoimentos**: Feedback de pacientes
-- **FAQ**: Perguntas frequentes
-- **Contato**: Formulário de contato e informações
+```
+/
+│
+├── index.html        # Página principal
+├── css/              
+│   └── style.css     # Estilos da página
+├── js/               
+│   └── script.js     # Funcionalidades JavaScript
+└── images/           # Pasta para imagens
+    └── logo.png      # Logo exemplo
+```
 
 ## Tecnologias Utilizadas
 
@@ -38,12 +42,22 @@ Uma landing page moderna, elegante e otimizada para SEO, criada para psicólogos
 - Velocidade de carregamento otimizada
 - Textos alternativos para imagens
 
-## Como Usar
+## Como Usar Localmente
 
-1. Clone este repositório
-2. Personalize os textos e imagens conforme necessário
-3. Atualize os dados de contato e informações do profissional
-4. Faça upload para seu servidor
+Simplesmente abra o arquivo `index.html` em qualquer navegador para visualizar o site.
+
+Para desenvolvimento, você pode usar:
+```
+# Python 3
+python -m http.server 8000
+
+# Node.js
+npx serve .
+```
+
+## Hospedagem
+
+Esta landing page é 100% estática e pode ser hospedada em qualquer serviço de hospedagem web com custo mínimo. Veja mais detalhes no arquivo `HOSPEDAGEM.md`.
 
 ## Customização
 
@@ -51,14 +65,9 @@ Uma landing page moderna, elegante e otimizada para SEO, criada para psicólogos
 - As fontes podem ser trocadas importando novas fontes do Google Fonts
 - As imagens podem ser substituídas mantendo o mesmo nome ou atualizando os caminhos no HTML
 
-## Hospedagem
+## Otimização SEO
 
-Esta landing page é estática e pode ser hospedada em qualquer serviço de hospedagem web com custo mínimo, como:
-
-- GitHub Pages (gratuito)
-- Netlify (gratuito)
-- Vercel (gratuito)
-- Amazon S3 (baixo custo)
+Veja o arquivo `OTIMIZACAO_SEO.md` para instruções detalhadas sobre como otimizar ainda mais o site para mecanismos de busca.
 
 ## Licença
 
