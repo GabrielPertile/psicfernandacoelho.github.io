@@ -10,14 +10,14 @@ Certifique-se de que essas meta tags estejam presentes em todas as páginas:
 <!-- Meta tags básicas -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ana Silva | Psicóloga Clínica em São Paulo</title>
-<meta name="description" content="Psicóloga Ana Silva - Atendimento online e presencial em São Paulo. Especialista em terapia cognitivo-comportamental, ansiedade, depressão e relacionamentos.">
+<title>Fernanda Coelho | Psicóloga Clínica em São Paulo</title>
+<meta name="description" content="Psicóloga Fernanda Coelho - Atendimento online e presencial em São Paulo. Especialista em terapia cognitivo-comportamental, ansiedade, depressão e relacionamentos.">
 
 <!-- Controle de indexação -->
 <meta name="robots" content="index, follow">
 
 <!-- Meta tags Open Graph (para compartilhamento em redes sociais) -->
-<meta property="og:title" content="Ana Silva | Psicóloga Clínica em São Paulo">
+<meta property="og:title" content="Fernanda Coelho | Psicóloga Clínica em São Paulo">
 <meta property="og:description" content="Atendimento psicológico online e presencial. Especialista em ansiedade, depressão e relacionamentos.">
 <meta property="og:image" content="https://www.anasilva-psicologa.com.br/images/og-image.jpg">
 <meta property="og:url" content="https://www.anasilva-psicologa.com.br">
@@ -25,7 +25,7 @@ Certifique-se de que essas meta tags estejam presentes em todas as páginas:
 
 <!-- Meta tags Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ana Silva | Psicóloga Clínica em São Paulo">
+<meta name="twitter:title" content="Fernanda Coelho | Psicóloga Clínica em São Paulo">
 <meta name="twitter:description" content="Atendimento psicológico online e presencial. Especialista em ansiedade, depressão e relacionamentos.">
 <meta name="twitter:image" content="https://www.anasilva-psicologa.com.br/images/og-image.jpg">
 
@@ -42,7 +42,7 @@ Adicione o seguinte código no `<head>` do seu HTML para fornecer informações 
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Ana Silva - Psicóloga Clínica",
+  "name": "Fernanda Coelho - Psicóloga Clínica",
   "image": "https://www.anasilva-psicologa.com.br/images/logo.png",
   "url": "https://www.anasilva-psicologa.com.br",
   "telephone": "+5511XXXXXXXXX",
@@ -117,7 +117,7 @@ Adicione o seguinte código no `<head>` do seu HTML para fornecer informações 
 
 Exemplo:
 ```html
-<img src="images/consultorio.jpg" alt="Consultório de psicologia da Dra. Ana Silva em São Paulo, ambiente acolhedor e calmo" width="800" height="600">
+<img src="images/consultorio.jpg" alt="Consultório de psicologia da Dra. Fernanda Coelho em São Paulo, ambiente acolhedor e calmo" width="800" height="600">
 ```
 
 ## Links Internos e Externos
