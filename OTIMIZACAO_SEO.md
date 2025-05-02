@@ -10,27 +10,27 @@ Certifique-se de que essas meta tags estejam presentes em todas as páginas:
 <!-- Meta tags básicas -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fernanda Coelho | Psicóloga Clínica em São Paulo</title>
-<meta name="description" content="Psicóloga Fernanda Coelho - Atendimento online e presencial em São Paulo. Especialista em terapia cognitivo-comportamental, ansiedade, depressão e relacionamentos.">
+<title>Fernanda Coelho | Psicóloga Clínica em Curitiba</title>
+<meta name="description" content="Psicóloga Fernanda Coelho - Atendimento online e presencial em Curitiba. Especialista em terapia cognitivo-comportamental, ansiedade, depressão e relacionamentos.">
 
 <!-- Controle de indexação -->
 <meta name="robots" content="index, follow">
 
 <!-- Meta tags Open Graph (para compartilhamento em redes sociais) -->
-<meta property="og:title" content="Fernanda Coelho | Psicóloga Clínica em São Paulo">
+<meta property="og:title" content="Fernanda Coelho | Psicóloga Clínica em Curitiba">
 <meta property="og:description" content="Atendimento psicológico online e presencial. Especialista em ansiedade, depressão e relacionamentos.">
-<meta property="og:image" content="https://www.anasilva-psicologa.com.br/images/og-image.jpg">
-<meta property="og:url" content="https://www.anasilva-psicologa.com.br">
+<meta property="og:image" content="https://psicfernandacoelho.com/images/og-image.jpg">
+<meta property="og:url" content="https://psicfernandacoelho.com">
 <meta property="og:type" content="website">
 
 <!-- Meta tags Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Fernanda Coelho | Psicóloga Clínica em São Paulo">
+<meta name="twitter:title" content="Fernanda Coelho | Psicóloga Clínica em Curitiba">
 <meta name="twitter:description" content="Atendimento psicológico online e presencial. Especialista em ansiedade, depressão e relacionamentos.">
-<meta name="twitter:image" content="https://www.anasilva-psicologa.com.br/images/og-image.jpg">
+<meta name="twitter:image" content="https://psicfernandacoelho.com/images/og-image.jpg">
 
 <!-- Canonical URL (evita conteúdo duplicado) -->
-<link rel="canonical" href="https://www.anasilva-psicologa.com.br">
+<link rel="canonical" href="https://psicfernandacoelho.com">
 ```
 
 ## Schema.org (JSON-LD)
@@ -43,13 +43,13 @@ Adicione o seguinte código no `<head>` do seu HTML para fornecer informações 
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Fernanda Coelho - Psicóloga Clínica",
-  "image": "https://www.anasilva-psicologa.com.br/images/logo.png",
-  "url": "https://www.anasilva-psicologa.com.br",
+  "image": "https://psicfernandacoelho.com/images/logo.png",
+  "url": "https://psicfernandacoelho.com",
   "telephone": "+5511XXXXXXXXX",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Av. Paulista, 1000, Conjunto 123",
-    "addressLocality": "São Paulo",
+    "addressLocality": "Curitiba",
     "addressRegion": "SP",
     "postalCode": "01310-000",
     "addressCountry": "BR"
@@ -86,7 +86,7 @@ Adicione o seguinte código no `<head>` do seu HTML para fornecer informações 
 ## Otimização de Conteúdo
 
 1. **Palavras-chave**: Use as seguintes palavras-chave estrategicamente ao longo do conteúdo:
-   - Psicóloga em São Paulo
+   - Psicóloga em Curitiba
    - Terapia online
    - Ansiedade
    - Depressão
@@ -117,7 +117,7 @@ Adicione o seguinte código no `<head>` do seu HTML para fornecer informações 
 
 Exemplo:
 ```html
-<img src="images/consultorio.jpg" alt="Consultório de psicologia da Dra. Fernanda Coelho em São Paulo, ambiente acolhedor e calmo" width="800" height="600">
+<img src="images/consultorio.jpg" alt="Consultório de psicologia da Dra. Fernanda Coelho em Curitiba, ambiente acolhedor e calmo" width="800" height="600">
 ```
 
 ## Links Internos e Externos
