@@ -33,12 +33,18 @@
   Header set X-XSS-Protection "1; mode=block"
 </IfModule>
 
-# Redirecionar para HTTPS (descomente quando tiver SSL)
-# <IfModule mod_rewrite.c>
-#   RewriteEngine On
-#   RewriteCond %{HTTPS} off
-#   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# </IfModule>
+# Redirecionar para HTTPS e "www"
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirecionar para HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Redirecionar para "www"
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
 
 # 404 página não encontrada
 ErrorDocument 404 /404.html
