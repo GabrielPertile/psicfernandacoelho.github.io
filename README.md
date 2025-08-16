@@ -1,18 +1,22 @@
-# Landing Page Estática para Psicólogo
+# Landing Page – Fernanda Coelho, Psicóloga Clínica
 
-Uma landing page moderna, elegante e otimizada para SEO, criada para psicólogos e terapeutas. Esta é uma versão totalmente estática, sem dependências de frameworks ou backend.
+Landing page moderna e elegante criada para a psicóloga **Fernanda Coelho**, totalmente estática, responsiva e otimizada para SEO. Ideal para apresentar serviços, permitir contato rápido e transmitir credibilidade aos pacientes.
 
-## Características
+---
 
-- Design moderno e atraente
-- Totalmente responsivo (mobile-first)
-- Otimizado para SEO
-- Carregamento rápido
-- HTML/CSS/JS puro
-- Formulário de contato com validação
-- Botão de WhatsApp para contato rápido
+## 🌟 Características
 
-## Estrutura do Projeto
+- Design moderno e atrativo  
+- Totalmente responsivo (mobile-first)  
+- Otimizado para SEO  
+- Carregamento rápido  
+- HTML, CSS e JavaScript puro (sem frameworks)  
+- Formulário de contato funcional com validação  
+- Botão de WhatsApp para contato direto  
+
+---
+
+## 🗂 Estrutura do Projeto
 
 ```
 /
@@ -26,49 +30,55 @@ Uma landing page moderna, elegante e otimizada para SEO, criada para psicólogos
     └── logo.png      # Logo exemplo
 ```
 
-## Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
 
-- HTML5
-- CSS3 (com variáveis CSS para fácil personalização)
-- JavaScript (vanilla)
-- Font Awesome (para ícones)
-- Google Fonts
+- HTML5  
+- CSS3 (com variáveis para fácil personalização)  
+- JavaScript (vanilla)  
+- Font Awesome (ícones)  
+- Google Fonts  
 
-## SEO
+---
 
-- Meta tags otimizadas
-- Schema.org markup para melhor indexação
-- Conteúdo estruturado com headings adequados
-- Velocidade de carregamento otimizada
-- Textos alternativos para imagens
+## 📈 SEO e Acessibilidade
 
-## Como Usar Localmente
+- Meta tags otimizadas  
+- Schema.org markup para melhor indexação  
+- Estrutura semântica de headings (H1, H2, etc.)  
+- Imagens com textos alternativos (`alt`)  
+- Conteúdo focado em experiência e velocidade  
 
-Simplesmente abra o arquivo `index.html` em qualquer navegador para visualizar o site.
+---
 
-Para desenvolvimento, você pode usar:
-```
-# Python 3
-python -m http.server 8000
+## 🌐 Hospedagem
 
-# Node.js
-npx serve .
-```
+Esta landing page é **100% estática** e pode ser publicada diretamente no **GitHub Pages**:
 
-## Hospedagem
+1. Faça commit de todos os arquivos no repositório  
+2. Ative **GitHub Pages** nas configurações do repositório  
+3. Defina a branch (normalmente `main`) e o diretório `/`  
+4. Acesse a página pelo link fornecido pelo GitHub  
 
-Esta landing page é 100% estática e pode ser hospedada em qualquer serviço de hospedagem web com custo mínimo. Veja mais detalhes no arquivo `HOSPEDAGEM.md`.
+> Nenhum backend ou servidor é necessário, tudo funciona como site estático.
 
-## Customização
+---
 
-- As cores podem ser facilmente alteradas no arquivo `css/style.css` nas variáveis CSS no início do arquivo
-- As fontes podem ser trocadas importando novas fontes do Google Fonts
-- As imagens podem ser substituídas mantendo o mesmo nome ou atualizando os caminhos no HTML
+## 🎨 Customização
 
-## Otimização SEO
+- **Cores:** altere facilmente nas variáveis CSS em `css/style.css`  
+- **Fontes:** troque importando novas fontes do Google Fonts  
+- **Imagens:** substitua mantendo o mesmo nome ou ajustando caminhos no HTML  
 
-Veja o arquivo `OTIMIZACAO_SEO.md` para instruções detalhadas sobre como otimizar ainda mais o site para mecanismos de busca.
+---
 
-## Licença
+## 📩 Formulário de Contato
 
-Este projeto está disponível para uso pessoal e comercial.
+- Configurado para **FormSubmit** ou outro serviço de envio de e-mails  
+- Validação básica com JavaScript  
+- Funciona diretamente no GitHub Pages (não funciona apenas abrindo o HTML localmente)  
+
+---
+
+## 📝 Licença
+
+Este projeto é **livre para uso pessoal e comercial**, podendo ser adaptado para outras clínicas ou profissionais de psicologia.
