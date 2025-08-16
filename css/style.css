@@ -1,22 +1,29 @@
 /* Base and Variables */
 :root {
-  --primary: #7c3aed;
-  --primary-light: #9f67ff;
-  --primary-dark: #6027c7;
-  --secondary: #0ea5e9;
-  --secondary-light: #38bdf8;
-  --secondary-dark: #0369a1;
-  --accent: #ec4899;
-  --accent-light: #fbcfe8;
-  --neutral-lightest: #f9fafb;
-  --neutral-light: #f3f4f6;
-  --neutral-medium: #9ca3af;
-  --neutral-dark: #1f2937;
+  --primary: #4a6fa5; /* azul suave, transmite confiança e calma */
+  --primary-light: #7ea3d0; /* azul claro para destaques */
+  --primary-dark: #34527a; /* azul mais profundo para hover ou textos */
+  --secondary: #a3b18a; /* verde oliva suave, ainda transmite tranquilidade */
+  --secondary-light: #c2cfb2; /* verde pastel */
+  --secondary-dark: #7f8d66; /* verde escuro */
+  --accent: #d4a373; /* tom terroso suave para detalhes */
+  --accent-light: #f1dac4; /* bege claro para realces delicados */
+  --neutral-lightest: #faf9f6;
+  --neutral-light: #f4f1eb;
+  --neutral-medium: #a8a29e;
+  --neutral-dark: #57534e;
   --success: #22c55e;
   --warning: #f59e0b;
   --error: #ef4444;
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Roboto', sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-body: "Roboto", sans-serif;
+  --primary-muted: #b3c1dc; /* azul bem suave para fundos */
+  --secondary-muted: #d5d9c7; /* verde claro para áreas neutras */
+  --accent-muted: #e7c9ab; /* tom pêssego leve para detalhes sutis */
+  --neutral-darkest: #3e3a36; /* textos ou rodapé */
+  --neutral-soft: #ece7e1; /* fundo mais quente, neutro */
+  --highlight: #a0b3d6; /* azul pastel para destaques suaves */
+  --shadow: rgba(0, 0, 0, 0.05); /* sombra leve */
 }
 
 * {
@@ -58,7 +65,12 @@ ul {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.3;
@@ -246,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
   .menu-toggle {
     display: none;
   }
-  
+
   .menu-desktop {
     display: flex;
     gap: 2rem;
@@ -266,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
   inset: 0;
   background: linear-gradient(to right, var(--primary), var(--primary-light));
   opacity: 0.9;
-  background-image: url('https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1600&h=800');
+  background-image: url("https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1600&h=800");
   background-size: cover;
   background-position: center;
   mix-blend-mode: overlay;
@@ -306,11 +318,11 @@ h1, h2, h3, h4, h5, h6 {
   .hero-content {
     padding: 8rem 0;
   }
-  
+
   .hero-title {
     font-size: 3rem;
   }
-  
+
   .hero-description {
     font-size: 1.25rem;
   }
@@ -385,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
   .about-grid {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .qualifications-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -409,6 +421,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   padding: 2rem;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -439,7 +453,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-description {
   color: var(--neutral-medium);
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
 }
 
 .service-link {
@@ -449,6 +463,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   font-size: 0.875rem;
   transition: color 0.3s ease;
+  margin-top: auto;
 }
 
 .service-link:hover {
@@ -942,12 +957,12 @@ h1, h2, h3, h4, h5, h6 {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .footer-bottom {
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   .copyright {
     text-align: left;
   }
