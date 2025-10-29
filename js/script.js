@@ -253,4 +253,92 @@ document.addEventListener("DOMContentLoaded", function () {
       el.style.transform = 'none';
     });
   }
+  // Tab visibility attention hint (blink title and favicon when user leaves the tab)
+  const originalTitle = document.title;
+  let visibilityIntervalId = null;
+
+  // Favicon helpers
+  const getFaviconLink = () => document.querySelector('link[rel~="icon"]');
+  const setFavicon = (href) => {
+    let link = getFaviconLink();
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'icon';
+      document.head.appendChild(link);
+    }
+    link.href = href;
+  };
+  const originalFaviconHref = (getFaviconLink() && getFaviconLink().href) || '/images/favicon.png';
+
+  // Build an attention favicon by adding a subtle ring around the original
+  let attentionFaviconHref = originalFaviconHref;
+  try {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      try {
+        const size = 64;
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext('2d');
+
+        // Draw original favicon centered and scaled
+        ctx.clearRect(0, 0, size, size);
+        ctx.drawImage(img, 0, 0, size, size);
+
+        // Draw subtle ring (brand-friendly gold)
+        ctx.save();
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = '#c2a57a';
+        ctx.shadowColor = 'rgba(0,0,0,0.08)';
+        ctx.shadowBlur = 2;
+        ctx.beginPath();
+        ctx.arc(size / 2, size / 2, size / 2 - 2, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
+
+        attentionFaviconHref = canvas.toDataURL('image/png');
+      } catch (e) {
+        attentionFaviconHref = originalFaviconHref;
+      }
+    };
+    img.onerror = () => {
+      attentionFaviconHref = originalFaviconHref;
+    };
+    img.src = originalFaviconHref;
+  } catch (e) {
+    attentionFaviconHref = originalFaviconHref;
+  }
+
+  const startBlinkTitle = () => {
+    if (visibilityIntervalId) return;
+    let toggle = false;
+    visibilityIntervalId = setInterval(() => {
+      toggle = !toggle;
+      document.title = toggle
+        ? 'Volte para continuar — Fernanda Coelho'
+        : originalTitle;
+      setFavicon(toggle ? attentionFaviconHref : originalFaviconHref);
+    }, 1200);
+  };
+
+  const stopBlinkTitle = () => {
+    if (visibilityIntervalId) {
+      clearInterval(visibilityIntervalId);
+      visibilityIntervalId = null;
+    }
+    document.title = originalTitle;
+    setFavicon(originalFaviconHref);
+  };
+
+  const onVisibilityChange = () => {
+    if (document.hidden) {
+      startBlinkTitle();
+    } else {
+      stopBlinkTitle();
+    }
+  };
+
+  document.addEventListener('visibilitychange', onVisibilityChange);
 });
