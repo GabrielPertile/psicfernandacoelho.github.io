@@ -148,4 +148,109 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Animations with Anime.js
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasAnime = typeof window.anime !== 'undefined';
+
+  if (hasAnime && !reduceMotion) {
+    // Hero intro animation
+    try {
+      window.anime
+        .timeline({ easing: 'easeOutCubic', duration: 700 })
+        .add({
+          targets: '.hero-title',
+          opacity: [0, 1],
+          translateY: [24, 0]
+        })
+        .add({
+          targets: '.hero-description',
+          opacity: [0, 1],
+          translateY: [16, 0],
+          offset: '-=400'
+        })
+        .add({
+          targets: '.hero-buttons .btn',
+          opacity: [0, 1],
+          scale: [0.95, 1],
+          delay: window.anime.stagger(80),
+          offset: '-=350'
+        });
+    } catch (err) {
+      // noop
+    }
+
+    // Button micro-interactions
+    document.querySelectorAll('a.btn, button, .cta').forEach((btn) => {
+      btn.addEventListener('mouseenter', () => {
+        window.anime({ targets: btn, scale: 1.03, duration: 160, easing: 'easeOutQuad' });
+      });
+      btn.addEventListener('mouseleave', () => {
+        window.anime({ targets: btn, scale: 1.0, duration: 160, easing: 'easeOutQuad' });
+      });
+      btn.addEventListener('mousedown', () => {
+        window.anime({ targets: btn, scale: 0.98, duration: 80, easing: 'easeOutQuad' });
+      });
+      btn.addEventListener('mouseup', () => {
+        window.anime({ targets: btn, scale: 1.0, duration: 120, easing: 'easeOutQuad' });
+      });
+    });
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+
+    const animateCounterFromText = (el) => {
+      const raw = el.textContent.trim();
+      const hasPlusPrefix = raw.startsWith('+');
+      const hasPlusSuffix = raw.endsWith('+');
+      const numeric = parseInt(raw.replace(/[^0-9]/g, ''), 10);
+      if (Number.isNaN(numeric)) return;
+
+      window.anime({
+        targets: { val: 0 },
+        val: numeric,
+        round: 1,
+        duration: 1200,
+        easing: 'easeOutCubic',
+        update: (anim) => {
+          const value = anim.animations[0].currentValue;
+          el.textContent = `${hasPlusPrefix ? '+' : ''}${value}${hasPlusSuffix ? '+' : ''}`;
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          window.anime({
+            targets: target,
+            opacity: [0, 1],
+            translateY: [24, 0],
+            duration: 600,
+            easing: 'easeOutCubic'
+          });
+
+          // Counters inside achievements
+          if (target.classList.contains('achievement')) {
+            const valEl = target.querySelector('.achievement-value');
+            if (valEl) animateCounterFromText(valEl);
+          }
+
+          observer.unobserve(target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach((el) => {
+      el.style.opacity = 0;
+      observer.observe(el);
+    });
+  } else {
+    // If reduced motion or anime missing, ensure elements are visible
+    document.querySelectorAll('.reveal').forEach((el) => {
+      el.style.opacity = 1;
+      el.style.transform = 'none';
+    });
+  }
 });
